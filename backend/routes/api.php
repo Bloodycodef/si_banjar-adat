@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\api\KategoriPengeluaranController;
+use App\Http\Controllers\api\Pemasukan;
 use Illuminate\Support\Facades\Route;
 
 // LOGIN (tanpa JWT)
@@ -15,9 +17,17 @@ Route::middleware('jwt.auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::post('/refresh', [AuthController::class, 'refresh']);
 
-    // KATEGORI PEMASUKAN (REST API)
+    // KATEGORI
     Route::apiResource(
         'kategori-pemasukan',
         CategoryController::class
     );
+
+    Route::apiResource(
+        'kategori-pengeluaran',
+        KategoriPengeluaranController::class
+    );
+
+    //PEMASUKAN
+    Route::apiResource('pemasukan', Pemasukan::class);
 });

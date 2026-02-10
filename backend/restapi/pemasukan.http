@@ -1,0 +1,62 @@
+@baseUrl = http://localhost:8000/api
+@token = fasdfasdf
+
+### LOGIN
+# @name login
+POST {{baseUrl}}/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "bendahara@example.com",
+  "password": "password123"
+}
+
+### CREATE PEMASUKAN
+POST {{baseUrl}}/pemasukan
+Authorization: Bearer {{token}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "kode_transaksi": "PM-001",
+  "nama_transaksi": "Dana Punia Bulanan",
+  "kategori_id": 1,
+  "qty": 10,
+  "harga_satuan": 50000,
+  "sumber_dana": "Umat Banjar",
+  "deskripsi": "Punia rutin bulan Februari"
+}
+
+
+### GET ALL PEMASUKAN
+GET {{baseUrl}}/pemasukan
+Authorization: Bearer {{token}}
+Accept: application/json
+
+
+### GET PEMASUKAN BY ID
+GET {{baseUrl}}/pemasukan/1
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### UPDATE PEMASUKAN
+PUT {{baseUrl}}/pemasukan/1
+Authorization: Bearer {{token}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "nama_transaksi": "Dana Punia Bulanan Update",
+  "qty": 12,
+  "harga_satuan": 50000,
+  "deskripsi": "Update jumlah punia"
+}
+
+
+### DELETE PEMASUKAN
+DELETE {{baseUrl}}/pemasukan/1
+Authorization: Bearer {{token}}
+Accept: application/json
+
+

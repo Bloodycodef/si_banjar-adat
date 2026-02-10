@@ -1,0 +1,50 @@
+@restapi = http://localhost:8000/api
+@token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzcwNzI0MjM2LCJleHAiOjE3NzA3Mjc4MzYsIm5iZiI6MTc3MDcyNDIzNiwianRpIjoiQk9RajVkVmVHMmpEb1ptWSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.BUd9pO1u7KtSS9W4j6MLiQjiQv5xBnRbPZs3kXJIG0U
+
+
+### LOGIN
+POST {{restapi}}/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "bendahara@example.com",
+  "password": "password123"
+}
+
+### CREATE KATEGORI PENGELUARAN
+POST {{restapi}}/kategori-pengeluaran
+Authorization: Bearer {{token}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "nama_kategori": "Belanja Upacara",
+  "deskripsi": "Pengeluaran untuk keperluan upacara adat"
+}
+
+### GET ALL KATEGORI PENGELUARAN
+GET {{restapi}}/kategori-pengeluaran
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### GET DETAIL KATEGORI PENGELUARAN
+GET {{restapi}}/kategori-pengeluaran/1
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### UPDATE KATEGORI PENGELUARAN
+PUT {{restapi}}/kategori-pengeluaran/1
+Authorization: Bearer {{token}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "nama_kategori": "Belanja Upacara Besar",
+  "deskripsi": "Pengeluaran upacara besar tahunan"
+}
+
+### DELETE KATEGORI PENGELUARAN
+DELETE {{restapi}}/kategori-pengeluaran/1
+Authorization: Bearer {{token}}
+Accept: application/json
