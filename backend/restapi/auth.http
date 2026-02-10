@@ -1,0 +1,17 @@
+@restapi = http://localhost:8000/api
+
+
+### LOGIN
+POST {{restapi}}/login
+Content-Type: application/json
+
+{
+  "email": "bendahara@example.com",
+  "password": "password123"
+}
+
+
+###GET ME
+GET {{restapi}}/me
+Accept: application/json
+Content-Type: application/json

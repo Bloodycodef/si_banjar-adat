@@ -1,0 +1,27 @@
+@restapi = http://localhost:8000/api
+@token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzcwNzE5NDQxLCJleHAiOjE3NzA3MjMwNDEsIm5iZiI6MTc3MDcxOTQ0MSwianRpIjoiaHZzM1ZRc2VnQVlEQnFhNCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.LK3_VOrqV8p6UZ5QCzA-ynV4Ov74d85T063tDsbK11g
+
+### LOGIN
+POST {{restapi}}/login
+Content-Type: application/json
+
+{
+  "email": "bendahara@example.com",
+  "password": "password123"
+}
+
+### CREATE KATEGORI PEMASUKAN
+POST {{restapi}}/kategori-pemasukan
+Content-Type: application/json
+
+{
+  "nama_kategori": "Dana Punia",
+  "deskripsi": "Pemasukan dana punia umat"
+}
+
+### GET ALL KATEGORI
+GET {{restapi}}/kategori-pemasukan
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzcwNzE5NDQxLCJleHAiOjE3NzA3MjMwNDEsIm5iZiI6MTc3MDcxOTQ0MSwianRpIjoiaHZzM1ZRc2VnQVlEQnFhNCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.LK3_VOrqV8p6UZ5QCzA-ynV4Ov74d85T063tDsbK11g
+Accept: application/json
+Content-Type: application/json
+
