@@ -1,8 +1,5 @@
 @baseUrl = http://localhost:8000/api
-@token = fasdfasdf
-
-### LOGIN
-# @name login
+@token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzcwOTU4NzYzLCJleHAiOjE3NzA5NjIzNjMsIm5iZiI6MTc3MDk1ODc2MywianRpIjoiOWJzNG13QTFRSnhZV093RCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.wu_QwH6TFn2AegpGBpKwGx1mzdz6YzmBeZPmrxn4_xI
 POST {{baseUrl}}/login
 Content-Type: application/json
 Accept: application/json
@@ -21,7 +18,7 @@ Content-Type: application/json
 {
   "kode_transaksi": "PM-001",
   "nama_transaksi": "Dana Punia Bulanan",
-  "kategori_id": 1,
+  "kategori_id": 2,
   "qty": 10,
   "harga_satuan": 50000,
   "sumber_dana": "Umat Banjar",

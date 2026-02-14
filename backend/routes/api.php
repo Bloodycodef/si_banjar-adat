@@ -1,9 +1,10 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
-use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\KategoriPemasukanController;
 use App\Http\Controllers\api\KategoriPengeluaranController;
 use App\Http\Controllers\api\Pemasukan;
+use App\Http\Controllers\Api\Pengeluaran;
 use Illuminate\Support\Facades\Route;
 
 // LOGIN (tanpa JWT)
@@ -20,7 +21,7 @@ Route::middleware('jwt.auth')->group(function () {
     // KATEGORI
     Route::apiResource(
         'kategori-pemasukan',
-        CategoryController::class
+        KategoriPemasukanController::class
     );
 
     Route::apiResource(
@@ -30,4 +31,5 @@ Route::middleware('jwt.auth')->group(function () {
 
     //PEMASUKAN
     Route::apiResource('pemasukan', Pemasukan::class);
+    Route::apiResource('pengeluaran', Pengeluaran::class);
 });

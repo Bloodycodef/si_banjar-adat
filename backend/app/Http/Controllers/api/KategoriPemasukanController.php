@@ -7,7 +7,7 @@ use App\Models\KategoriPemasukan;
 use Illuminate\Http\Request;
 use PDO;
 
-class CategoryController extends Controller
+class KategoriPemasukanController extends Controller
 {
     //GET CATEGORY
     public function index()
